@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> opgave 1 </title>
+        <title> opgave 2 </title>
     </head>
     <body>
-        <form method="post" action="opgave1.php">
-            <h1>Hvad er 2 + 2?</h1>
+        <form method="post" action="opgave2.php">
+            <h1>Hvad er 3^2?</h1>
             <div>
                 <input type="number" placeholder = "ur answer" name="input">
             </div>
@@ -19,13 +19,12 @@
 <?php
 session_start();
 if(isset($_POST['ok_Btn'])){
-    $input=$_POST['input'];
-    $_SESSION['correct'] = 0;
-    if($input == 4){
+    $input = $_POST['input'];
+    if($input == 9){
         $_SESSION['correct'] = $_SESSION['correct']+1;
-        header('Location:opgave2.php');
+        header('Location:opgaveslut.php');
     } else {
-        header('Location:opgave2.php');
+        header('Location:opgaveslut.php');
     }
 }
 ?>
