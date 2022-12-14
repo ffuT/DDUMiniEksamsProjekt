@@ -10,7 +10,6 @@
 
 <?php
 session_start();
-
 $conn = mysqli_connect("localhost", "root","");
 $userid = $_SESSION['UserID'];
 $sql= "SELECT Correct FROM websitelogin.login WHERE ID = '$userid'";

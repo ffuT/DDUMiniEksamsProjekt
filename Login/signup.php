@@ -28,7 +28,7 @@ $conn = mysqli_connect("localhost", "root","");
 if(isset($_POST['login_Btn'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $sql = "SELECT * FROM websitelogin.login WHERE Username = '$username'";
+    $sql = "SELECT * FROM websitelogin.final WHERE Username = '$username'";
     $result = mysqli_query($conn,$sql);
     while($row = mysqli_fetch_assoc($result)){
         echo "<script>
@@ -36,7 +36,7 @@ if(isset($_POST['login_Btn'])){
     </script>";
     return;
     }
-    $sql= "INSERT INTO websitelogin.login (Username,Password) VALUES('$username','$password')";
+    $sql= "INSERT INTO websitelogin.final (Username,Password) VALUES('$username','$password')";
     if ($conn->query($sql) === TRUE) {
         echo "New profile created successfully";
       } else {

@@ -29,7 +29,7 @@ $conn = mysqli_connect("localhost", "root","");
 if(isset($_POST['login_Btn'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $sql= "SELECT * FROM websitelogin.login WHERE Username = '$username'";
+    $sql= "SELECT * FROM websitelogin.final WHERE Username = '$username'";
     $result = mysqli_query($conn,$sql);
     while($row = mysqli_fetch_assoc($result)){
         $resultPassword = $row['Password'];
