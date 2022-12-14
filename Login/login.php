@@ -34,6 +34,7 @@ if(isset($_POST['login_Btn'])){
     while($row = mysqli_fetch_assoc($result)){
         $resultPassword = $row['Password'];
         if($password == $resultPassword){
+            $_SESSION['UserID'] = 
             $_SESSION['Username']=$username;
             $_SESSION['Password']=$password;
             header('Location:opgaver\opgave1.php');

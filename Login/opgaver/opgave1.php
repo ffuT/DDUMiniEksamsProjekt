@@ -20,7 +20,7 @@
 session_start();
 if(isset($_POST['ok_Btn'])){
     $input=$_POST['input'];
-
+    
     if($input == 4){
         echo "<script>
         alert('Correct');
