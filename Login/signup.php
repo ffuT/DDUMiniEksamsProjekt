@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <form method="post" action="signup.php">
+        <form autocomplete="off" method="post" action="signup.php">
             <h1>Sign up</h1>
             <div class="textBoxdiv">
                 <input type="text" placeholder="username" name="username">
